@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Assignment6 - Daisuke Sato</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/sunny/jquery-ui.css" />
+  <link rel="stylesheet" type="text/css" href="haccordion.css" />
+  <link rel="stylesheet" href="mycss.css">
+  
+ 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="myjs.js"></script> 
+ 
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+  <!--scripts for the horizontal accordion-->
+  <script type="text/javascript" src="haccordion.js"></script>
+  <script type="text/javascript">
+
+	haccordion.setup({
+		accordionid: 'hc2', //main accordion div id
+		paneldimensions: {peekw:'30px', fullw:'450px', h:'150px'},
+		selectedli: [-1, true], //[selectedli_index, persiststate_bool]
+		collapsecurrent: false //<- No comma following very last setting!
+	})
+
+  </script> 
+</head>
+
+<body>
+  <div id="main">
+	
+	<h1>Grandma's Apple Pie</h1>
+	<p>
+	<img src="apple-pie.jpg" alt="apple pie" id="image"/><span id="enlarge"><span class="ui-icon ui-icon-arrowthick-1-n"></span> Click the picture to enlarge</span>
+	</p>
+	<h2>Original recipe makes 1 - 9 inch pie:</h2>
+	<blockquote>"This was my grandmother's apple pie recipe. I have never seen another one quite like it. It will always be my favorite and has won me several first place prizes in local competitions. I hope it becomes one of your favorites as well!" — MOSHASMAMA </blockquote>
+	
+	<h2>Ingredients:</h2>
+	<ul>
+		<h3>*Move an item to the check-list box below*</h3>
+		<li class="draggable"><span class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-state-hover">1 recipe pastry for a 9 inch pie</span></li>
+		<li class="draggable"><span class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-state-hover">1/2 cup unsalted butter</span></li>
+		<li class="draggable"><span class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-state-hover">3 tablespoons all-purpose flour</span></li>
+		<li class="draggable"><span class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-state-hover">1/4 cup water</span></li>
+		<li class="draggable"><span class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-state-hover">1/2 cup white sugar</span></li>
+		<li class="draggable"><span class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-state-hover">1/2 cup packed brown sugar</span></li>
+		<li class="draggable"><span class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-state-hover">8 sliced apples</span></li>
+		<li class="draggable" id="dummyItem"></li>
+	</ul>
+	<div id="droppable" class="ui-widget-header">
+	  <p>Check List - Drop All Items to Start Cooking!!</p>
+	</div>
+	 
+	 <h2>Progress:</h2>
+	 <div id="progressbar"></div>
+	
+	<div id="directionsArea"> 
+	<h2>Directions:</h2>
+		<div id="hc2" class="haccordion">
+		<ul>
+
+		<li style="border-right-width:0">
+			<div class="hpanel" style="padding:10px; width:500px">
+			<span>STEP 1</span><br />
+			Preheat oven to 425 degrees F (220 degrees C). Melt the butter in a saucepan. Stir in flour to form a paste. Add water, white sugar and brown sugar, and bring to a boil. Reduce temperature and let simmer.
+			</div>
+		</li>
+
+		<li style="border-right-width:0">
+			<div class="hpanel" style="padding:10px; width:500px">
+			<span>STEP 2</span><br />
+			Place the bottom crust in your pan. Fill with apples, mounded slightly. Cover with a lattice work crust. Gently pour the sugar and butter liquid over the crust. Pour slowly so that it does not run off.
+			</div>
+		</li>
+
+		<li>
+			<div class="hpanel" style="padding:10px; width:500px">
+			<span>STEP 3</span><br />
+			Bake 15 minutes in the preheated oven. Reduce the temperature to 350 degrees F (175 degrees C). Continue baking for 35 to 45 minutes, until apples are soft.
+			</div>
+		</li>
+
+		</ul>
+		</div>
+	</div>
+	
+	<p>
+		&copy; Daisuke Sato
+	</P>
+  </div>
+</body>
+</html>
